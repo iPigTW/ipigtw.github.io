@@ -37,6 +37,12 @@ Userinfo:AddButton({
     Name = "Copy Client ID(HWID)",
     Callback = function()
         setclipboard(game:GetService("RbxAnalyticsService"):GetClientId())
+        OrionLib:MakeNotification({
+            Name = "Copied!",
+            Content = "EEEEEEEEE",
+            Image = "rbxassetid://4483345998",
+            Time = 5
+        })
     end
 })
 local Modifier = Window:MakeTab{
@@ -74,6 +80,7 @@ Modifier:AddTextbox({
 	TextDisappear = true,
 	Callback = function(Value)
 		plr.UserId = Value
+        
 	end	  
 })
 while wait(1) do
